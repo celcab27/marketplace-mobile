@@ -16,6 +16,9 @@ function DetailScreen({
       <Image source={{uri: item?.thumbnail}} style={style.image} />
       <View style={style.descriptionContainer}>
         <Text style={style.title}>{item?.title}</Text>
+        <Text style={style.subtitle}>
+          {item?.brand} - {item.stock} disponibles
+        </Text>
         <Text style={style.description}>{item?.description}</Text>
         <Text style={style.price}>${item?.price}</Text>
       </View>

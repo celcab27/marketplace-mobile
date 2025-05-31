@@ -1,19 +1,47 @@
+import {useGetProductsCategories} from '../../hooks/useGetCategories';
 import StatusContainer from '../../components/StatusContainer';
 import {useGetProducts} from '../../hooks/useGetProducts';
 import {FlatList, Text, View} from 'react-native';
+import {ORDER_OPTIONS} from '../../utils/filters';
 import ItemCard from '../../components/ItemCard';
+import {SelectOptionI} from '../../interfaces';
+import Select from '../../components/Select';
+import React, {useState} from 'react';
 import style from './style';
-import React from 'react';
 
 function HomeScreen() {
-  const {products, isLoading, isError} = useGetProducts();
+  const [selectedOption, setSelectedOption] = useState<
+    SelectOptionI | undefined
+  >();
+  const [sortOption, setSortOption] = useState<SelectOptionI | undefined>();
+  const {products, isLoading, isError} = useGetProducts({
+    category: selectedOption?.id || '',
+    orderOption: sortOption?.id,
+  });
+  const {
+    categories,
+    isLoading: categoriesLoading,
+    isError: categoriesError,
+  } = useGetProductsCategories();
 
   return (
     <View style={style.container}>
       <Text style={style.title}>Listado de Productos</Text>
+      <Select
+        options={categories}
+        setSelectedOption={setSelectedOption}
+        selectedOption={selectedOption}
+        title="Category"
+      />
+      <Select
+        options={ORDER_OPTIONS}
+        setSelectedOption={setSortOption}
+        selectedOption={sortOption}
+        title="Sort By"
+      />
       <StatusContainer
-        isLoading={isLoading}
-        isError={isError}
+        isLoading={isLoading || categoriesLoading}
+        isError={isError || categoriesError}
         children={
           <FlatList
             data={products}

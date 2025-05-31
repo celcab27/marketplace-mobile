@@ -26,7 +26,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 24,
     paddingHorizontal: 8,
-    paddingVertical: 8,
+    paddingTop: 8,
   },
   description: {
     fontFamily: '"Roboto", sans-serif',
@@ -53,4 +53,11 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   buttonText: {color: '#fff'},
+  subtitle: {
+    fontFamily: '"Roboto", sans-serif',
+    color: '#114232',
+    fontSize: 14,
+    paddingHorizontal: 8,
+    paddingBottom: 8,
+  },
 });
