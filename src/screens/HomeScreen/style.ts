@@ -15,4 +15,9 @@ export default StyleSheet.create({
     fontSize: 24,
     padding: 8,
   },
+  selectsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+  },
 });

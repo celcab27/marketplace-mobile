@@ -49,7 +49,8 @@ export default function Select({
               renderItem={({item}) => (
                 <TouchableOpacity
                   style={style.option}
-                  onPress={() => handleSelect(item)}>
+                  onPress={() => handleSelect(item)}
+                  key={item.id}>
                   <Text style={style.optionText}>{item.name}</Text>
                 </TouchableOpacity>
               )}

@@ -19,7 +19,7 @@ export const useGetProductsCategories = () => {
         name: item.name,
       }));
 
-      setCategories(data);
+      setCategories(formattedData);
     }
   }, [data]);
 

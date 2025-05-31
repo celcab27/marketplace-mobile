@@ -2,7 +2,9 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    padding: 20,
+    paddingVertical: 20,
+    flex: 1,
+    marginRight: 16
   },
   selectButton: {
     borderWidth: 1,
@@ -11,7 +13,7 @@ export default StyleSheet.create({
     borderRadius: 8,
   },
   selectText: {
-    fontSize: 16,
+    fontSize: 14,
   },
   modalOverlay: {
     flex: 1,

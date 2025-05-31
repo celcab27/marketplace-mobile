@@ -26,24 +26,32 @@ function HomeScreen() {
 
   return (
     <View style={style.container}>
-      <Text style={style.title}>Listado de Productos</Text>
-      <Select
-        options={categories}
-        setSelectedOption={setSelectedOption}
-        selectedOption={selectedOption}
-        title="Category"
-      />
-      <Select
-        options={ORDER_OPTIONS}
-        setSelectedOption={setSortOption}
-        selectedOption={sortOption}
-        title="Sort By"
-      />
       <StatusContainer
         isLoading={isLoading || categoriesLoading}
         isError={isError || categoriesError}
         children={
           <FlatList
+            ListHeaderComponent={
+              <View>
+                <Text style={style.title}>Listado de Productos</Text>
+                <View style={style.selectsContainer}>
+                  <Select
+                    options={categories}
+                    setSelectedOption={setSelectedOption}
+                    selectedOption={selectedOption}
+                    title="Category"
+                    key="category-select"
+                  />
+                  <Select
+                    options={ORDER_OPTIONS}
+                    setSelectedOption={setSortOption}
+                    selectedOption={sortOption}
+                    title="Sort By"
+                    key="sorting-select"
+                  />
+                </View>
+              </View>
+            }
             data={products}
             numColumns={2}
             keyExtractor={(item, index) =>
@@ -54,7 +62,7 @@ function HomeScreen() {
               alignItems: 'center',
             }}
             renderItem={({item}) => (
-              <View style={{flex: 1, padding: 8}}>
+              <View style={{flex: 1, padding: 8}} key={item.id}>
                 <ItemCard item={item} />
               </View>
             )}
