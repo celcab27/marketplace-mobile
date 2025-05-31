@@ -6,7 +6,7 @@ import {ItemI} from '../interfaces';
 export const useGetProducts = () => {
   const [products, setProducts] = useState<ItemI[]>([]);
 
-  const {data, error, isLoading} = useQuery({
+  const {data, isError, isLoading} = useQuery({
     queryKey: ['getProducts'],
     queryFn: getProducts,
   });
@@ -17,5 +17,5 @@ export const useGetProducts = () => {
     }
   }, [data]);
 
-  return {products, error, isLoading};
+  return {products, isError, isLoading};
 };

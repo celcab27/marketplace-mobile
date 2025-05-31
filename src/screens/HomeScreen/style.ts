@@ -5,6 +5,8 @@ export default StyleSheet.create({
     paddingTop: 24,
     backgroundColor: '#fff',
     paddingHorizontal: 16,
+    height: '100%',
+    width: '100%',
   },
   title: {
     fontFamily: '"Roboto", sans-serif',
