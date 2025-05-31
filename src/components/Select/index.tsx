@@ -30,7 +30,7 @@ export default function Select({
         style={style.selectButton}
         onPress={() => setModalVisible(true)}>
         <Text style={style.selectText}>
-          {selectedOption ? selectedOption.name : 'Seleccionar opción'}
+          {selectedOption ? selectedOption.name : 'Select an option'}
         </Text>
       </TouchableOpacity>
 

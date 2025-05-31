@@ -33,7 +33,7 @@ function HomeScreen() {
           <FlatList
             ListHeaderComponent={
               <View>
-                <Text style={style.title}>Listado de Productos</Text>
+                <Text style={style.title}>Product List</Text>
                 <View style={style.selectsContainer}>
                   <Select
                     options={categories}

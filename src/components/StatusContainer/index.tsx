@@ -20,8 +20,8 @@ function StatusContainer({isLoading, isError, children}: StatusContainerProps) {
     </View>
   ) : (
     <View style={style.errorContainer}>
-      <Text>Ups! Ocurrió un error.</Text>
-      <Text>Por favor volvé a intentar más tarde.</Text>
+      <Text>Oops! An error has occurre</Text>
+      <Text>Please, try again later.</Text>
     </View>
   );
 

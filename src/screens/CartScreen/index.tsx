@@ -9,7 +9,7 @@ function CartScreen() {
 
   return (
     <View style={style.container}>
-      <Text style={style.title}>Carrito de Compras</Text>
+      <Text style={style.title}>Shopping Cart</Text>
       <FlatList
         data={items ?? []}
         renderItem={({item}) => <ChartItem item={item} />}

@@ -32,7 +32,7 @@ function DetailScreen({
           <View style={style.descriptionContainer}>
             <Text style={style.title}>{item?.title}</Text>
             <Text style={style.subtitle}>
-              {item?.brand} - {item?.stock} disponibles
+              {item?.brand} - {item?.stock} available
             </Text>
             <Text style={style.description}>{item?.description}</Text>
             <Text style={style.price}>${item?.price}</Text>
@@ -44,7 +44,7 @@ function DetailScreen({
               if (!item) return;
               addItem(item);
             }}>
-            <Text style={style.buttonText}>Agregar al carrito</Text>
+            <Text style={style.buttonText}>Add to Cart</Text>
           </TouchableHighlight>
         </View>
       }
