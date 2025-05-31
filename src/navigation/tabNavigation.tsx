@@ -14,10 +14,10 @@ const linking = {
   prefixes: ['marketplace://'],
   config: {
     screens: {
-      CartStack: {
-        path: 'cart',
+      HomeStack: {
+        path: 'list',
         screens: {
-          CartMain: 'CartMain',
+          Detail: 'detail/:item',
         },
       },
     },
@@ -26,7 +26,7 @@ const linking = {
 
 export type RootStackParamList = {
   HomeMain: undefined;
-  Detail: {item: ItemI};
+  Detail: {item: string};
 };
 
 const Tabs = () => {

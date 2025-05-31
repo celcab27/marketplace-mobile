@@ -24,3 +24,9 @@ export const getProductCategories = async () => {
 
   return response.data;
 };
+
+export const getProductByID = async (id: string) => {
+  const response = await axios.get(`https://dummyjson.com/products/${id}`);
+
+  return response.data;
+};

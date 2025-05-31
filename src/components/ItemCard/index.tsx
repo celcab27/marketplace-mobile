@@ -17,7 +17,7 @@ function ItemCard({item}: ItemCardProps) {
 
   return (
     <TouchableHighlight
-      onPress={() => navigation.navigate('Detail', {item})}
+      onPress={() => navigation.navigate('Detail', {item: item.id})}
       underlayColor={PRIMARY_LIGHT_COLOR}
       style={style.container}>
       <View>
