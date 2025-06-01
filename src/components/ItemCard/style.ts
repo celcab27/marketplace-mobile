@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {GRAY} from '../../theme/colors';
+import {GRAY, PRIMARY_COLOR, SECONDARY_COLOR, WHITE} from '../../theme/colors';
 
 export default StyleSheet.create({
   container: {
@@ -13,17 +13,17 @@ export default StyleSheet.create({
   image: {
     borderRadius: 24,
     height: 144,
-    backgroundColor: '#fff',
+    backgroundColor: WHITE,
   },
   title: {
     fontFamily: '"Roboto", sans-serif',
-    color: '#114232',
+    color: PRIMARY_COLOR,
     fontSize: 16,
     marginBottom: 16,
   },
   price: {
     fontFamily: '"Roboto", sans-serif',
-    color: '#623947',
+    color: SECONDARY_COLOR,
     fontWeight: 'bold',
   },
 });

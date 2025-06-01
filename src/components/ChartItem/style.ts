@@ -1,10 +1,11 @@
 import {StyleSheet} from 'react-native';
+import {GRAY, PRIMARY_COLOR, SECONDARY_COLOR, WHITE} from '../../theme/colors';
 
 export default StyleSheet.create({
   container: {
     marginHorizontal: 16,
     marginVertical: 8,
-    backgroundColor: '#F9F9F9',
+    backgroundColor: GRAY,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
@@ -16,18 +17,18 @@ export default StyleSheet.create({
     borderRadius: 16,
     height: 70,
     width: 70,
-    backgroundColor: '#fff',
+    backgroundColor: WHITE,
     marginRight: 16,
   },
   title: {
     fontFamily: '"Roboto", sans-serif',
-    color: '#114232',
+    color: PRIMARY_COLOR,
     fontSize: 14,
     marginBottom: 4,
   },
   price: {
     fontFamily: '"Roboto", sans-serif',
-    color: '#623947',
+    color: SECONDARY_COLOR,
     fontWeight: 'bold',
     fontSize: 24,
   },

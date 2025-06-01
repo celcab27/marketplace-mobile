@@ -1,16 +1,17 @@
 import {StyleSheet} from 'react-native';
+import {PRIMARY_COLOR, WHITE} from '../../theme/colors';
 
 export default StyleSheet.create({
   container: {
     paddingTop: 24,
-    backgroundColor: '#fff',
+    backgroundColor: WHITE,
     paddingHorizontal: 16,
     height: '100%',
     width: '100%',
   },
   title: {
     fontFamily: '"Roboto", sans-serif',
-    color: '#114232',
+    color: PRIMARY_COLOR,
     fontWeight: 'bold',
     fontSize: 24,
     padding: 8,
